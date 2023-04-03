@@ -1,0 +1,9 @@
+float altura;
+boolean flag;
+int idade;
+double somatorio;
+String nome = "jose";
+
+while(i <= 10){
+		idade = 15;		
+}

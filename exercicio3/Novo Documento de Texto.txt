@@ -1,0 +1,3 @@
+java -jar jflex.jar exemplo03.flex
+javac Ex03.java
+java Ex03 teste.txt
