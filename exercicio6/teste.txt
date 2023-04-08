@@ -1,6 +1,2 @@
-a4
-while
-if
-#@
-9finalAb
-2for
+String nome = "jose";
+cout << "Meu nome é" << nome;

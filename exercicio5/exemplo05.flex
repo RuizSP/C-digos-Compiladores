@@ -1,8 +1,24 @@
 %%
-
 %standalone
+%line
+%column
+%class Ex05
+
+letra = [A-Za-z]
+digito = [0-9]
+digitos = {digito}{digito}*
+ident = {letra}({letra}|{digito})*
+
+fimdeLinha = \r|\n|\r\n
+branco = " "
+espaco = ({fimdeLinha}|[ \t]|{branco})*
+
+KW_COUT = "cout"
+concat = "<<"
+qualquerLetra = .
+texto = {qualquerLetra}*
+msgTela = {KW_COUT}{espaco}{concat}{espaco}{texto}
 
 %%
-[0-9] { System.out.print(" digito "); }
-[A-Za-z] { System.out.print(" letra "); }
-("if"|"while"|"for"|"final"|"main") { System.out.print(" Key_words "); }
+
+{msgTela} {System.out.println("<msgTela: "+ yytext()+ ", linha:"+ yyline + ", coluna:"+ yycolumn +">" ); }
